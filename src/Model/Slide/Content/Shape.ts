@@ -1,4 +1,4 @@
-type Shape = {
+type Shape = Content & {
 	border: Border,
 	background: string,
 }

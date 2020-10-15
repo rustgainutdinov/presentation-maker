@@ -1,5 +1,7 @@
 type Slide = {
 	background: string,
-	contentList: Array<Content>,
 	animation: number,
+	contentList: {
+		[key: string]: Content
+	}
 }

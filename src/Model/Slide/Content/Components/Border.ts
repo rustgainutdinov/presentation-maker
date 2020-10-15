@@ -1,5 +1,5 @@
-type Border = {	
-	width: number,
-	color: string,
-	type: number,
+type Border = {
+		width: number,
+		color: string,
+		type: number,
 }
