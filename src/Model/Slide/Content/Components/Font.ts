@@ -5,3 +5,4 @@ type Font = {
 	lineHeight: number,
 	style: string,
 }
+export default Font
