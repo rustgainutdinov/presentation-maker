@@ -1,3 +1,4 @@
 type Rectangle = Shape & {
-	bottomRightCoordinate: Point
+	bottomRightCoordinate: Point;
+	rectangleSize: RectangleSize;
 }
