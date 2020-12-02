@@ -3,3 +3,4 @@ const ContentType = {
 	CIRCLE: 1,
 	Rectangle: 2
 };
+export default ContentType
