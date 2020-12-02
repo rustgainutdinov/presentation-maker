@@ -1,3 +1,10 @@
+import ContentType from "../Const/ContentType";
+import generateUuid from "../Methods/generateUuid";
+import Action from "./Action";
+import Presentation from "./Presentation";
+import Content from "./Slide/Content/Content";
+import Slide from "./Slide/Slide";
+
 class Editor {
 	private actionsList: Array<Action>;
 	currentPresentation: Presentation;
@@ -38,3 +45,5 @@ class Editor {
 		this.actionsList.push(action);
 	}
 }
+
+export default Editor
