@@ -1,15 +1,21 @@
 import instanceOfRectangle from "../AddContent/instanceOfRectangle";
 import Editor from "../../Model/Editor";
-import Rectangle from "../../Model/Slide/Content/Shape/Rectangle";
+import getNewEditor from "../AddContent/getNewEditor";
 
 function updateRectangleSiz(editor: Editor, width: number, height: number) {
-	if (!instanceOfRectangle(editor.currentContent)) {
+	const newEditor = getNewEditor(editor);
+	if (!instanceOfRectangle(newEditor.currentContent)) {
 		return;
 	}
-	editor.currentContent.rectangleSize = {
+	
+	const newRectangle =  newEditor.currentContent;
+	newRectangle.rectangleSize = {
         width: width,
         height: height
 	};
+
+	newEditor.currentContent = newRectangle;
+	return newEditor;
 }
 
 export default updateRectangleSiz

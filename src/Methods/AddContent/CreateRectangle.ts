@@ -8,7 +8,6 @@ import getDefaultRectangleSize from "./GetParamsOfContent/getDefaultRectangleSiz
 import getDefaultShape from "./GetParamsOfContent/getDefaultShape";
 
 function createRectangle(editor: Editor): string {
-
 	const newEditor = getNewEditor(editor);
 
 	const rectangle: Rectangle = Object.assign(getDefaultShape(ContentType.Rectangle), {

@@ -6,7 +6,6 @@ import getDefaultShape from "./GetParamsOfContent/getDefaultShape";
 import getNewEditor from "./getNewEditor"
 
 function createCircle(editor: Editor): string {
-	
 	const newEditor = getNewEditor(editor);
 
 	const circle: Circle = Object.assign(getDefaultShape(ContentType.CIRCLE), {
