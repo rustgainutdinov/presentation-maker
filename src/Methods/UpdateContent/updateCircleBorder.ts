@@ -5,7 +5,7 @@ function updateCircleBorder(editor: Editor, borderWidth: number, borderColor: st
 	if (!instanceOfCircle(editor.currentContent)) {
 		return;
 	}
-	
+
 	editor.currentContent.border = {
 		width: borderWidth,
 		color: borderColor,
