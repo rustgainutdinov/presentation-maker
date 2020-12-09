@@ -6,7 +6,7 @@ import Content from "./Slide/Content/Content";
 import Slide from "./Slide/Slide";
 
 class Editor {
-	private actionsList: Array<Action>;
+	actionsList: Array<Action>;
 	currentPresentation: Presentation;
 	currentSlide: Slide;
 	currentContent: Content;
