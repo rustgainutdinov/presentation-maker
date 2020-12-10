@@ -6,9 +6,9 @@ import Editor from "../../Model/Editor";
 describe('createCircleTest', () => {
     const editor = new Editor();
     const circleType = ContentType.CIRCLE;
+    createCircle(editor);
 
     test('addContentToEditor', () => {
-        createCircle(editor);
         expect(editor.currentContent.type).toBe(circleType);
         expect(checkInstance()).toBe(true)
 
@@ -20,10 +20,10 @@ describe('createCircleTest', () => {
     });
 
     function checkInstance() {
-        if (!instanceOfCircle(editor.currentContent)) {
-            return false;
+        if (instanceOfCircle(editor.currentContent)) {
+            return true;
         } else {
-            return true
+            return false
         }
     }
 })

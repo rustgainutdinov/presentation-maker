@@ -7,11 +7,13 @@ import getDefaultTextContainer from "./GetParamsOfContent/getDefaultTextContaine
 import addContentToEditor from "./addContentToEditor";
 
 function createTextContainer(editor: Editor): string {
-	const newEditor = getNewEditor(editor);
+    const newEditor = getNewEditor(editor);
 
-    const TextContainer: TextContainer = 
-    Object.assign(getDefaultContent(ContentType.TextContainer),
-    Object.assign(getDefaultTextContainer()));
+    const TextContainer: TextContainer =
+        Object.assign(getDefaultContent(ContentType.TextContainer),
+            Object.assign(getDefaultTextContainer()));
 
-	return addContentToEditor(newEditor, TextContainer);
+    return addContentToEditor(newEditor, TextContainer);
 }
+
+export default createTextContainer;

@@ -18,7 +18,7 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "isolatedModules": true
   },
   "include": [

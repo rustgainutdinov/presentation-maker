@@ -19,4 +19,4 @@ function updateRectangleBorder(editor: Editor, borderWidth: number, borderColor:
 	return newEditor;
 }
 
-export default updateCircleBorder
+export default updateRectangleBorder
