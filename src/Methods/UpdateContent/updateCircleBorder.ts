@@ -1,6 +1,5 @@
 import Editor from "../../Model/Editor";
 import Circle from "../../Model/Slide/Content/Shape/Circle";
-import createCircle from "../AddContent/CreateCircle";
 import getNewEditor from "../AddContent/getNewEditor";
 import instanceOfCircle from "../AddContent/instanceOfCircle";
 
