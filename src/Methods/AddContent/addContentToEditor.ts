@@ -5,9 +5,9 @@ import getNewEditor from "./getNewEditor";
 
 function addContentToEditor(editor: Editor, content: Content): string {
 	const uuid: string = generateUuid();
-	const newEditor = getNewEditor(editor);
-	newEditor.currentContent = content;
-	newEditor.currentSlide.contentList[uuid] = content;
+	editor.currentContent = content;
+	editor.currentSlide.contentList[uuid] = content;
+	//Сделать так что бы создавался новый едитор и возвращать его
 	return uuid;
 }
 
