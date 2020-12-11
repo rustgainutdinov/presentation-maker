@@ -1,5 +1,8 @@
+import Font from "./Font";
+
 type RichText = {
 	color: string,
-	font: Font,
+	font: number,
 	value: string,
 }
+export default RichText

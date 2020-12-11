@@ -1,5 +1,12 @@
+import ContentType from "../Const/ContentType";
+import generateUuid from "../Methods/generateUuid";
+import Action from "./Action";
+import Presentation from "./Presentation";
+import Content from "./Slide/Content/Content";
+import Slide from "./Slide/Slide";
+
 class Editor {
-	private actionsList: Array<Action>;
+	actionsList: Array<Action>;
 	currentPresentation: Presentation;
 	currentSlide: Slide;
 	currentContent: Content;
@@ -12,7 +19,8 @@ class Editor {
 				y: 0
 			},
 			layer: 0,
-			type: ContentType.DEFAULT
+			type: ContentType.DEFAULT,
+			uuid: ""
 		};
 		this.currentSlide = {
 			background: "#FFFFFF",
@@ -38,3 +46,5 @@ class Editor {
 		this.actionsList.push(action);
 	}
 }
+
+export default Editor

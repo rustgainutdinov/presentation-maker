@@ -4,3 +4,5 @@ function generateUuid() {
 		return v.toString(16);
 	});
 }
+
+export default generateUuid
