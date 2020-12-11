@@ -8,9 +8,7 @@ function addContentToEditor(editor: Editor, content: Content): Editor {
 	const newEditor = getNewEditor(editor);
 
 	newEditor.currentContent = content;
-	console.log(content);
 	newEditor.currentContent.uuid = uuid;
-	console.log(content);
 	newEditor.currentSlide.contentList[uuid] = content;
 
 	return newEditor;

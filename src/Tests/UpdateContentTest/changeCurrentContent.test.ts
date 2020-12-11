@@ -11,10 +11,13 @@ describe('changeCurrentContentTest', () => {
         type: 2,
         uuid: ""
     };
-    const newEditor = addContentToEditor(editor, content);
+
+    const firstEditor = addContentToEditor(editor, content);
+    const firstId = firstEditor.currentContent.uuid;
+    const secondEditor = addContentToEditor(editor, content);
+    const secondId = secondEditor.currentContent.uuid;
 
     test('addContentToEditor', () => {
-        expect(newEditor.currentContent).toBe(content);
-        expect(newEditor.currentSlide.contentList[newEditor.currentContent.uuid]).toBe(content)
+        expect(firstId).not.toBe(secondId);
     });
 })
