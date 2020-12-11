@@ -19,7 +19,8 @@ class Editor {
 				y: 0
 			},
 			layer: 0,
-			type: ContentType.DEFAULT
+			type: ContentType.DEFAULT,
+			uuid: ""
 		};
 		this.currentSlide = {
 			background: "#FFFFFF",

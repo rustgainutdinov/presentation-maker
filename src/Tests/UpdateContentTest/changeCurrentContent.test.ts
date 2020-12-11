@@ -3,7 +3,7 @@ import getDefaultPosition from "../../Methods/AddContent/GetParamsOfContent/getD
 import Editor from "../../Model/Editor";
 import Content from "../../Model/Slide/Content/Content";
 
-describe('addContentToEditorTest', () => {
+describe('changeCurrentContentTest', () => {
     const editor = new Editor();
     const content: Content = {
         position: getDefaultPosition(),
