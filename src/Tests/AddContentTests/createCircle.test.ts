@@ -1,5 +1,5 @@
 import ContentType from "../../Const/ContentType";
-import createCircle from "../../Methods/AddContent/CreateCircle";
+import createCircle from "../../Methods/AddContent/createCircle";
 import instanceOfCircle from "../../Methods/AddContent/instanceOfCircle";
 import Editor from "../../Model/Editor";
 

@@ -1,5 +1,5 @@
 import ContentType from "../../Const/ContentType";
-import createRectangle from "../../Methods/AddContent/CreateRectangle";
+import createRectangle from "../../Methods/AddContent/createRectangle";
 import getDefaultPosition from "../../Methods/AddContent/GetParamsOfContent/getDefaultPosition";
 import getDefaultRectangleSize from "../../Methods/AddContent/GetParamsOfContent/getDefaultRectangleSize";
 import instanceOfRectangle from "../../Methods/AddContent/instanceOfRectangle";
