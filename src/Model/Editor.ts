@@ -6,11 +6,23 @@ import Content from "./Slide/Content/Content";
 import Slide from "./Slide/Slide";
 
 class Editor {
+	//TODO: Массив состояний с указателями! Харнить Editor 
+	//TODO: ActionList -> вынести из Editor
+	//TODO: Class Editor - > JSObject (чтобы проще создавать новый едитор)
+	//TODO: Персисцентная структура данных должна быть
+	//TODO: Сразу редакс реакт dispatch() -> меняет стейт -> стор знает о новом стейте -> ...
+	//JSPDF
+
+
 	actionsList: Array<Action>;
 	currentPresentation: Presentation;
 	currentSlide: Slide;
 	currentContent: Content;
-	
+	// selection:  {
+	// currentSlide: Slide;
+	// currentContent: Content;
+	// }
+
 	constructor() {
 		this.actionsList = [];
 		this.currentContent = {
@@ -35,13 +47,13 @@ class Editor {
 			author: 'author',
 			sliderList: []
 		};
-		
+
 	}
-	
+
 	add(action: Action) {
 		this.actionsList.push(action);
 	}
-	
+
 	delete(action: Action) {
 		this.actionsList.push(action);
 	}

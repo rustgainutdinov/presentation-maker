@@ -7,6 +7,7 @@ import getDefaultRectangleSize from "./GetParamsOfContent/getDefaultRectangleSiz
 import getDefaultShape from "./GetParamsOfContent/getDefaultShape";
 
 function createRectangle(editor: Editor): Editor {
+	//TODO: попробовать деструктуризацию вместо object.assigm
 	const rectangle: Rectangle = Object.assign(getDefaultShape(ContentType.Rectangle), {
 		bottomRightCoordinate: getDefaultPosition(),
 		rectangleSize: getDefaultRectangleSize()
