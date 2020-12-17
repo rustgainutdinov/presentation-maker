@@ -2,7 +2,7 @@ import Content from "./Content"
 import RichText from "./Components/RichText";
 
 type TextContainer = Content & {
-	width: string,
+	width: number,
 	background: string,
 	richText: RichText,
 }

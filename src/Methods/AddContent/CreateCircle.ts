@@ -2,9 +2,9 @@ import ContentType from "../../Const/ContentType";
 import Editor from "../../Model/Editor";
 import Circle from "../../Model/Slide/Content/Shape/Circle";
 import addContentToEditor from "./addContentToEditor";
-import getDefaultShape from "./Get Params Of Content/getDefaultShape";
+import getDefaultShape from "./GetParamsOfContent/getDefaultShape";
 
-function createCircle(editor: Editor): string {
+function createCircle(editor: Editor): Editor {
 	const circle: Circle = Object.assign(getDefaultShape(ContentType.CIRCLE), {
 		radius: 100,
 	});

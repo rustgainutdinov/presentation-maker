@@ -1,11 +1,19 @@
 import Editor from "../../Model/Editor";
+import Circle from "../../Model/Slide/Content/Shape/Circle";
+import getNewEditor from "../AddContent/getNewEditor";
 import instanceOfCircle from "../AddContent/instanceOfCircle";
 
 function updateCircleRadius(editor: Editor, circleRadius: number) {
-	if (!instanceOfCircle(editor.currentContent)) {
+	const newEditor = getNewEditor(editor);
+	if (!instanceOfCircle(newEditor.currentContent)) {
 		return;
 	}
-	editor.currentContent.radius = circleRadius;
+
+	const newCircle: Circle = newEditor.currentContent;
+	newCircle.radius = circleRadius;
+	newEditor.currentContent = newCircle
+
+	return newEditor;
 }
 
 export default updateCircleRadius
