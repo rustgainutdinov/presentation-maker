@@ -3,10 +3,11 @@ import getDefaultBorder from "./getDefaultBorder";
 import getDefaultContent from "./getDefaultContent";
 
 function getDefaultShape(contentType: number): Shape {
-	return Object.assign(getDefaultContent(contentType), {
+	return {
+		...getDefaultContent(contentType),
 		border: getDefaultBorder(),
 		background: '#0000FF',
-	});
+	};
 }
 
 export default getDefaultShape

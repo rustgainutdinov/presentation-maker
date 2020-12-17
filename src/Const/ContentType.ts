@@ -1,6 +1,6 @@
 const ContentType = {
-	DEFAULT: 0,
-	CIRCLE: 1,
+	Default: 0,
+	Circle: 1,
 	Rectangle: 2,
 	TextContainer: 3
 };

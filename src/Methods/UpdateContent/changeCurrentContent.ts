@@ -1,11 +1,10 @@
 import Editor from "../../Model/Editor";
-import getNewEditor from "../AddContent/getNewEditor";
 
 function changeCurrentContent(editor: Editor, newSlideId: string) {
-	const newEditor = getNewEditor(editor);	 
-	newEditor.currentContent = newEditor.currentSlide.contentList[newSlideId];
-
-	return newEditor
+	return {
+		...editor,
+		currentContent: editor.currentSlide.contentList[newSlideId]
+	}
 }
 
 export default changeCurrentContent

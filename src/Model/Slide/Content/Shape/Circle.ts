@@ -2,7 +2,7 @@ import Shape from "../Shape"
 
 type Circle = Shape & {
 	radius: number,
-	circle: ''
+	circle: undefined
 }
 
 export default Circle

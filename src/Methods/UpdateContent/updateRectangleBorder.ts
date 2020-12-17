@@ -1,22 +1,29 @@
 import Editor from "../../Model/Editor";
-import getNewEditor from "../AddContent/getNewEditor";
-import instanceOfRectangle from "../AddContent/instanceOfRectangle";
+import Content from "../../Model/Slide/Content/Content";
+import Rectangle from "../../Model/Slide/Content/Shape/Rectangle";
+
+function isRectangle(content: Content): content is Rectangle {
+	return 'rectangle' in content;
+}
 
 function updateRectangleBorder(editor: Editor, borderWidth: number, borderColor: string, borderType: number) {
-	const newEditor = getNewEditor(editor);
-	if (!instanceOfRectangle(newEditor.currentContent)) {
-		return;
+	if (!isRectangle(editor.currentContent)) {
+		return
 	}
-
-	const newRectangle = newEditor.currentContent;
-	newRectangle.border = {
-		width: borderWidth,
-		color: borderColor,
-		type: borderType,
-	}
-
-	newEditor.currentContent = newRectangle;
-	return newEditor;
+	const rectangle: Rectangle = {
+		...editor.currentContent,
+		border: {
+			width: borderWidth,
+			color: borderColor,
+			type: borderType
+		}
+	};
+	return {
+		...editor,
+		currentContent: {
+			...rectangle
+		}
+	};
 }
 
 export default updateRectangleBorder

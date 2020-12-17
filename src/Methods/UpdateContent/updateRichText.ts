@@ -45,8 +45,8 @@ function updateRichTextValue(editor: Editor, char: string) {
 	return newEditor;
 }
 
-export  {
-    updateRichTextValue, 
-    updateRichTextFont,
-    updateRichTextColor
+export {
+	updateRichTextValue,
+	updateRichTextFont,
+	updateRichTextColor
 }

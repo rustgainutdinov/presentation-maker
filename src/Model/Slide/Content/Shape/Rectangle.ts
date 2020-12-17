@@ -3,9 +3,9 @@ import RectangleSize from "../RectangleSize"
 import Shape from "../Shape"
 
 type Rectangle = Shape & {
-	//readonly fileds
 	bottomRightCoordinate: Point;
 	rectangleSize: RectangleSize;
+	rectangle: undefined
 }
 
 export default Rectangle

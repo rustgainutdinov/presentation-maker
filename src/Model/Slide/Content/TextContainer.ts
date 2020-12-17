@@ -3,7 +3,6 @@ import RichText from "./Components/RichText";
 
 type TextContainer = Content & {
 	width: number,
-	background: string,
 	richText: RichText,
 }
 

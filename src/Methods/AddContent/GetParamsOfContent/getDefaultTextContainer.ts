@@ -4,11 +4,11 @@ import getDefaultContent from "./getDefaultContent";
 import contentType from "../../../Const/ContentType";
 
 function getDefaultTextContainer(): TextContainer {
-    return Object.assign(getDefaultContent(contentType.TextContainer), {
+    return {
+        ...getDefaultContent(contentType.TextContainer),
         width: 100,
-        background: '#ffffff',
         richText: getDefaultRichText()
-    });
+    };
 }
 
 function getDefaultRichText(): RichText {

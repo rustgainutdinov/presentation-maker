@@ -12,7 +12,8 @@ function createRectangle(editor: Editor): Editor {
 	const rectangle: Rectangle = {
 		...getDefaultShape(ContentType.Rectangle),
 		bottomRightCoordinate: getDefaultPosition(),
-		rectangleSize: getDefaultRectangleSize()
+		rectangleSize: getDefaultRectangleSize(),
+		rectangle: undefined
 	};
 	const uuid = generateUuid();
 	return {
