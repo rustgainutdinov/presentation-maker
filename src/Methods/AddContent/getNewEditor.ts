@@ -1,8 +1,7 @@
 import Editor from "../../Model/Editor";
 
 function getNewEditor(editor: Editor) {
-    const newEditor: Editor = new Editor();
-    //TODO: спросить является ли это созданием нового эдитора!
+    //TODO: ГЛЕБ, этот метод теперь не нужен
 
     newEditor.actionsList = editor.actionsList;
     newEditor.currentContent = editor.currentContent;
