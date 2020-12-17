@@ -15,8 +15,11 @@ function getDefaultRichText(): RichText {
     return {
         color: '#ffffff',
         font: 12,
-        value: ''
+        value: 'new Text'
     }
 }
 
-export default getDefaultTextContainer;
+export {
+    getDefaultTextContainer,
+    getDefaultRichText
+} 

@@ -1,7 +1,7 @@
 import Content from "./Content/Content"
 
 type Slide = {
-	// slideId: number,
+	slideId: number,
 	background: string,
 	animation: number,
 	contentList: {
