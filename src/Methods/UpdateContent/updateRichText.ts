@@ -1,51 +1,67 @@
 import Editor from "../../Model/Editor";
+import Content from "../../Model/Slide/Content/Content";
 import TextContainer from "../../Model/Slide/Content/TextContainer";
-import instanceOfTextContainer from "../AddContent/instanceOfText";
-function isRectangle(content: Content): content is TextContainer {
-	return 'RichText' in content;
+
+function isTextCntainer(content: Content): content is TextContainer {
+	return 'richText' in content;
 }
 
 
-function updateRichTextColor(editor: Editor, color: string) {
-	const newEditor = getNewEditor(editor);
-	if (!instanceOfTextContainer(newEditor.currentContent)) {
-		return;
+function updateRichTextColor(editor: Editor, newColor: string) {
+	if (!isTextCntainer(editor.currentContent)) {
+		return
 	}
-
-	const newTextContainer: TextContainer = newEditor.currentContent;
-	newTextContainer.richText.color = color;
-	newEditor.currentContent = newTextContainer;
-
-	newEditor.currentContent = newTextContainer;
-	return newEditor;
+	const richText: TextContainer = {
+		...editor.currentContent,
+		richText: {
+			...editor.currentContent.richText,
+			color: newColor
+		}
+	};
+	return {
+		...editor,
+		currentContent: {
+			...richText
+		}
+	};
 }
 
-function updateRichTextFont(editor: Editor, font: number) {
-	const newEditor = getNewEditor(editor);
-	if (!instanceOfTextContainer(newEditor.currentContent)) {
-		return;
+function updateRichTextFont(editor: Editor, newFont: number) {
+	if (!isTextCntainer(editor.currentContent)) {
+		return
 	}
-
-	const newTextContainer: TextContainer = newEditor.currentContent;
-	newTextContainer.richText.font = font;
-	newEditor.currentContent = newTextContainer;
-
-	newEditor.currentContent = newTextContainer;
-	return newEditor;
+	const richText: TextContainer = {
+		...editor.currentContent,
+		richText: {
+			...editor.currentContent.richText,
+			font: newFont
+		}
+	};
+	return {
+		...editor,
+		currentContent: {
+			...richText
+		}
+	};
 }
 
-function updateRichTextValue(editor: Editor, char: string) {
-	const newEditor = getNewEditor(editor);
-	if (!instanceOfTextContainer(newEditor.currentContent)) {
-		return;
+function updateRichTextValue(editor: Editor, newValue: string) {
+	if (!isTextCntainer(editor.currentContent)) {
+		return
 	}
-
-	const newTextContainer: TextContainer = newEditor.currentContent;
-	newTextContainer.richText.value = char;
-	newEditor.currentContent = newTextContainer;
-
-	newEditor.currentContent = newTextContainer;
-	return newEditor;
+	const richText: TextContainer = {
+		...editor.currentContent,
+		richText: {
+			...editor.currentContent.richText,
+			value: newValue
+		}
+	};
+	return {
+		...editor,
+		currentContent: {
+			...richText
+		}
+	};
 }
 
 export {
