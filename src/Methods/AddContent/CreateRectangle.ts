@@ -15,13 +15,15 @@ function createRectangle(editor: Editor): Editor {
 		rectangleSize: getDefaultRectangleSize()
 	};
 	const uuid = generateUuid();
-	let contentList = {
-		[uuid]: rectangle,
-		...editor.currentSlide.contentList
-	};
 	return {
-		...contentList,
 		...editor,
+		currentSlide: {
+			...editor.currentSlide,
+			contentList: {
+				...editor.currentSlide.contentList,
+				[uuid]: rectangle
+			}
+		}
 	};
 }
 
