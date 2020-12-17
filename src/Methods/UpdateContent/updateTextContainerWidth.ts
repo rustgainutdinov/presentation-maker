@@ -1,20 +1,26 @@
 import Editor from "../../Model/Editor";
+import Content from "../../Model/Slide/Content/Content";
 import TextContainer from "../../Model/Slide/Content/TextContainer";
-import getNewEditor from "../AddContent/getNewEditor";
 import instanceOfTextContainer from "../AddContent/instanceOfText";
 
-function updateTextContainerWidth(editor: Editor, width: number) {
-    const newEditor = getNewEditor(editor);
-    
-	if (!instanceOfTextContainer(newEditor.currentContent)) {
-		return;
-    }
-    
-	const newTextContainer: TextContainer = newEditor.currentContent;
-	newTextContainer.width = width;
-	newEditor.currentContent = newTextContainer;
+function isTextCntainer(content: Content): content is TextContainer {
+	return 'richText' in content;
+}
 
-	return newEditor;
+function updateTextContainerWidth(editor: Editor, newWidth: number) {
+	if (!isTextCntainer(editor.currentContent)) {
+		return
+	}
+	const richText: TextContainer = {
+		...editor.currentContent,
+		width: newWidth
+	};
+	return {
+		...editor,
+		currentContent: {
+			...richText
+		}
+	};
 }
 
 export default updateTextContainerWidth

@@ -1,7 +1,10 @@
 import Editor from "../../Model/Editor";
 import TextContainer from "../../Model/Slide/Content/TextContainer";
-import getNewEditor from "../AddContent/getNewEditor";
 import instanceOfTextContainer from "../AddContent/instanceOfText";
+function isRectangle(content: Content): content is TextContainer {
+	return 'RichText' in content;
+}
+
 
 function updateRichTextColor(editor: Editor, color: string) {
 	const newEditor = getNewEditor(editor);
