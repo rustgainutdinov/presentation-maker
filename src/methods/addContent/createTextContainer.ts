@@ -1,8 +1,8 @@
-import ContentType from "../../Const/ContentType";
-import Editor from "../../Model/Editor";
-import TextContainer from "../../Model/Slide/Content/TextContainer";
-import getDefaultContent from "../AddContent/GetParamsOfContent/getDefaultContent"
-import {getDefaultTextContainer} from "./GetParamsOfContent/getDefaultTextContainer";
+import ContentType from "../../const/ContentType";
+import Editor from "../../model/Editor";
+import TextContainer from "../../model/slide/content/TextContainer";
+import getDefaultContent from "../addContent/getParamsOfContent/getDefaultContent"
+import {getDefaultTextContainer} from "./getParamsOfContent/getDefaultTextContainer";
 import generateUuid from "../generateUuid";
 
 function createTextContainer(editor: Editor): Editor {

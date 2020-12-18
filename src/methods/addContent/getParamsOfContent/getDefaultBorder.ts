@@ -1,4 +1,4 @@
-import BorderType from "../../../Const/BorderType"
+import BorderType from "../../../const/BorderType"
 
 function getDefaultBorder() {
 	return {

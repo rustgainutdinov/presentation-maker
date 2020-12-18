@@ -1,6 +1,6 @@
-import Editor from "../../Model/Editor";
-import Content from "../../Model/Slide/Content/Content";
-import Rectangle from "../../Model/Slide/Content/Shape/Rectangle";
+import Editor from "../../model/Editor";
+import Content from "../../model/slide/content/Content";
+import Rectangle from "../../model/slide/content/shape/Rectangle";
 
 function isRectangle(content: Content): content is Rectangle {
 	return 'rectangle' in content;

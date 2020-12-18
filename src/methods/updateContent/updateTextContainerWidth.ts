@@ -1,6 +1,6 @@
-import Editor from "../../Model/Editor";
-import Content from "../../Model/Slide/Content/Content";
-import TextContainer from "../../Model/Slide/Content/TextContainer";
+import Editor from "../../model/Editor";
+import Content from "../../model/slide/content/Content";
+import TextContainer from "../../model/slide/content/TextContainer";
 
 function isTextCntainer(content: Content): content is TextContainer {
 	return 'textContainer' in content;

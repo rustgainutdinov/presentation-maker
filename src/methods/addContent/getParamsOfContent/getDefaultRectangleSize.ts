@@ -1,4 +1,4 @@
-import RectangleSize from "../../../Model/Slide/Content/RectangleSize"
+import RectangleSize from "../../../model/slide/content/RectangleSize"
 
 function getDefaultRectangleSize(): RectangleSize {
 	return {

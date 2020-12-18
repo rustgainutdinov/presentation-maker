@@ -1,6 +1,6 @@
-import Editor from "../../Model/Editor";
-import Content from "../../Model/Slide/Content/Content";
-import Circle from "../../Model/Slide/Content/Shape/Circle";
+import Editor from "../../model/Editor";
+import Content from "../../model/slide/content/Content";
+import Circle from "../../model/slide/content/shape/Circle";
 
 function isCircle(content: Content): content is Circle {
 	return 'circle' in content;

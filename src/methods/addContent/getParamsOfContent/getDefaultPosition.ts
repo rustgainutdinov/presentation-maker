@@ -1,4 +1,4 @@
-import Point from "../../../Model/Slide/Content/Point"
+import Point from "../../../model/slide/content/Point"
 
 function getDefaultPosition(): Point {
 	return {

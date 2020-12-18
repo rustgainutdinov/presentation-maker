@@ -1,6 +1,6 @@
-import Editor from "../../Model/Editor";
-import Presentation from "../../Model/Presentation";
-import getDefaultPresentation from "./GetParamsOfContent/getDefaultPresentation";
+import Editor from "../../model/Editor";
+import Presentation from "../../model/Presentation";
+import getDefaultPresentation from "./getParamsOfContent/getDefaultPresentation";
 
 function createPresentation(editor: Editor): Editor {
 	const presentation: Presentation = {

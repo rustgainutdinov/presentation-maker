@@ -1,4 +1,4 @@
-import Content from "../../../Model/Slide/Content/Content";
+import Content from "../../../model/slide/content/Content";
 import getDefaultPosition from "./getDefaultPosition";
 
 function getDefaultContent(contentType: number): Content {

@@ -1,9 +1,9 @@
-import ContentType from "../../Const/ContentType";
-import Editor from "../../Model/Editor";
-import Rectangle from "../../Model/Slide/Content/Shape/Rectangle";
-import getDefaultPosition from "./GetParamsOfContent/getDefaultPosition";
-import getDefaultRectangleSize from "./GetParamsOfContent/getDefaultRectangleSize";
-import getDefaultShape from "./GetParamsOfContent/getDefaultShape";
+import ContentType from "../../const/ContentType";
+import Editor from "../../model/Editor";
+import Rectangle from "../../model/slide/content/shape/Rectangle";
+import getDefaultPosition from "./getParamsOfContent/getDefaultPosition";
+import getDefaultRectangleSize from "./getParamsOfContent/getDefaultRectangleSize";
+import getDefaultShape from "./getParamsOfContent/getDefaultShape";
 import generateUuid from "../generateUuid";
 
 function createRectangle(editor: Editor): Editor {
