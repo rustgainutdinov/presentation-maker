@@ -15,7 +15,7 @@ function getDefaultPresentation(): Presentation {
         uuid: uuid,
         richText: getDefaultRichText(),
         width: 100
-    }
+    };
     const slide: Slide = {
         slideId: 1,
         background: "#fff",
@@ -23,16 +23,13 @@ function getDefaultPresentation(): Presentation {
         contentList: {
             [uuid]: firstContent
         }
-    }
-
-    const slideList: Array<Slide> = [];
-    slideList.push(slide)
+    };
 
     return {
         name: "newPresentation",
         date: new Date(),
         author: "newAuthor",
-        sliderList: slideList
+        sliderList: [slide]
     }
 }
 

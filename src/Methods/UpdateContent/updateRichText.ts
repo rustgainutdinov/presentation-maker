@@ -3,9 +3,8 @@ import Content from "../../Model/Slide/Content/Content";
 import TextContainer from "../../Model/Slide/Content/TextContainer";
 
 function isTextCntainer(content: Content): content is TextContainer {
-	return 'richText' in content;
+	return 'textContainer' in content;
 }
-
 
 function updateRichTextColor(editor: Editor, newColor: string) {
 	if (!isTextCntainer(editor.currentContent)) {

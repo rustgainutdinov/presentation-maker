@@ -4,16 +4,12 @@ import Circle from "../../Model/Slide/Content/Shape/Circle";
 import generateUuid from "../generateUuid";
 import getDefaultShape from "./GetParamsOfContent/getDefaultShape";
 
-function getDefaultRadius(): number {
-	return 100;
-}
-
 function createCircle(editor: Editor): Editor {
 	const circle: Circle = {
 		...getDefaultShape(ContentType.Circle),
-		radius: getDefaultRadius(),
+		radius: 100,
 		circle: undefined
-	}
+	};
 	const uuid = generateUuid();
 	return {
 		...editor,
