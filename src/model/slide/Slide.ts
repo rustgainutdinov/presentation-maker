@@ -1,4 +1,4 @@
-import Content from "./Content/Content"
+import Content from "./content/Content"
 
 type Slide = {
 	slideId: number,

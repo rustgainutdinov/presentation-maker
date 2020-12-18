@@ -1,8 +1,8 @@
-import ContentType from "../../const/ContentType";
-import Editor from "../../model/Editor";
-import Circle from "../../model/slide/content/shape/Circle";
+import ContentType from "../../Const/ContentType";
+import Editor from "../../Model/Editor";
+import Circle from "../../Model/Slide/Content/Shape/Circle";
 import generateUuid from "../generateUuid";
-import getDefaultShape from "./getParamsOfContent/getDefaultShape";
+import getDefaultShape from "./GetParamsOfContent/getDefaultShape";
 
 function createCircle(editor: Editor): Editor {
 	const circle: Circle = {

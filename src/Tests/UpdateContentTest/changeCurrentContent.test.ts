@@ -1,7 +1,7 @@
-import addContentToEditor from "../../Methods/AddContent/addContentToEditor";
-import getDefaultPosition from "../../Methods/AddContent/GetParamsOfContent/getDefaultPosition";
-import Editor from "../../Model/Editor";
-import Content from "../../Model/Slide/Content/Content";
+import addContentToEditor from "../../methods/addContent/addContentToEditor";
+import getDefaultPosition from "../../methods/addContent/getParamsOfContent/getDefaultPosition";
+import Editor from "../../model/Editor";
+import Content from "../../model/slide/content/Content";
 
 describe('changeCurrentContentTest', () => {
     const editor = new Editor();

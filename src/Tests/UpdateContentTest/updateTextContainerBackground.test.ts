@@ -1,11 +1,11 @@
-import ContentType from "../../Const/ContentType";
-import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
-import getDefaultTextContainer from "../../Methods/AddContent/GetParamsOfContent/getDefaultTextContainer";
-import instanceOfTextContainer from "../../Methods/AddContent/instanceOfText";
-import updateTextContainerBackground from "../../Methods/UpdateContent/updateTextContainerBackground";
-import Editor from "../../Model/Editor";
-import Content from "../../Model/Slide/Content/Content"
-import TextContainer from "../../Model/Slide/Content/TextContainer";
+import ContentType from "../../const/ContentType";
+import getDefaultShape from "../../methods/addContent/getParamsOfContent/getDefaultShape";
+import getDefaultTextContainer from "../../methods/addContent/getParamsOfContent/getDefaultTextContainer";
+import instanceOfTextContainer from "../../methods/addContent/instanceOfText";
+import updateTextContainerBackground from "../../methods/updateContent/updateTextContainerBackground";
+import Editor from "../../model/Editor";
+import Content from "../../model/slide/content/Content"
+import TextContainer from "../../model/slide/content/TextContainer";
 
 function checkInstance(content: Content | undefined) {
     if (instanceOfTextContainer(content)) {

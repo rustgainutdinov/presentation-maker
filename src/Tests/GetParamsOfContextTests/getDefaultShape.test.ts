@@ -1,6 +1,6 @@
-import BorderType from "../../Const/BorderType";
-import ContentType from "../../Const/ContentType";
-import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
+import BorderType from "../../const/BorderType";
+import ContentType from "../../const/ContentType";
+import getDefaultShape from "../../methods/addContent/getParamsOfContent/getDefaultShape";
 
 describe('getDefaultShapeTests', () => {
     const type = ContentType.CIRCLE;

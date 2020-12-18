@@ -1,5 +1,5 @@
-import getNewEditor from "../../Methods/AddContent/getNewEditor";
-import Editor from "../../Model/Editor";
+import getNewEditor from "../../methods/addContent/getNewEditor";
+import Editor from "../../model/Editor";
 
 describe('getNewEdiitorTest', () => {
     const editor = new Editor();

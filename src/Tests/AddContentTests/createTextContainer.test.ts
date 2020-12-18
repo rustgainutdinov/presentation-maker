@@ -1,8 +1,8 @@
-import ContentType from "../../Const/ContentType";
-import createTextContainer from "../../Methods/AddContent/createTextContainer";
-import getDefaultTextContainer from "../../Methods/AddContent/GetParamsOfContent/getDefaultTextContainer";
-import instanceOfTextContainer from "../../Methods/AddContent/instanceOfText";
-import Editor from "../../Model/Editor";
+import ContentType from "../../const/ContentType";
+import createTextContainer from "../../methods/addContent/createTextContainer";
+import getDefaultTextContainer from "../../methods/addContent/getParamsOfContent/getDefaultTextContainer";
+import instanceOfTextContainer from "../../methods/addContent/instanceOfText";
+import Editor from "../../model/Editor";
 
 describe('createTextContainerTest', () => {
     const editor = new Editor();

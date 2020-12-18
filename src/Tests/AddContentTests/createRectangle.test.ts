@@ -1,9 +1,9 @@
-import ContentType from "../../Const/ContentType";
-import createRectangle from "../../Methods/AddContent/createRectangle";
-import getDefaultPosition from "../../Methods/AddContent/GetParamsOfContent/getDefaultPosition";
-import getDefaultRectangleSize from "../../Methods/AddContent/GetParamsOfContent/getDefaultRectangleSize";
-import instanceOfRectangle from "../../Methods/AddContent/instanceOfRectangle";
-import Editor from "../../Model/Editor";
+import ContentType from "../../const/ContentType";
+import createRectangle from "../../methods/addContent/createRectangle";
+import getDefaultPosition from "../../methods/addContent/getParamsOfContent/getDefaultPosition";
+import getDefaultRectangleSize from "../../methods/addContent/getParamsOfContent/getDefaultRectangleSize";
+import instanceOfRectangle from "../../methods/addContent/instanceOfRectangle";
+import Editor from "../../model/Editor";
 
 describe('createRectangleTest', () => {
     const editor = new Editor();

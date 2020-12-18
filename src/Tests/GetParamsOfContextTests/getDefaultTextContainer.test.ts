@@ -1,4 +1,4 @@
-import getDefaultTextContainer from "../../Methods/AddContent/GetParamsOfContent/getDefaultTextContainer";
+import getDefaultTextContainer from "../../methods/addContent/getParamsOfContent/getDefaultTextContainer";
 
 describe('getDefaultContentTests', () => {
     test('getDefaultContentPositionTest', () => {

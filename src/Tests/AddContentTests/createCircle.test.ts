@@ -1,6 +1,6 @@
-import ContentType from "../../Const/ContentType";
-import instanceOfCircle from "../../Methods/AddContent/instanceOfCircle";
-import createCircle from "../../Methods/AddContent/createCircle";
+import ContentType from "../../const/ContentType";
+import instanceOfCircle from "../../methods/addContent/instanceOfCircle";
+import createCircle from "../../methods/addContent/createCircle";
 
 describe('createCircleTest', () => {
 	const editor = new Editor();

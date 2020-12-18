@@ -1,5 +1,5 @@
-import BorderType from "../../Const/BorderType";
-import getDefaultBorder from "../../Methods/AddContent/GetParamsOfContent/getDefaultBorder"
+import BorderType from "../../const/BorderType";
+import getDefaultBorder from "../../methods/addContent/getParamsOfContent/getDefaultBorder"
 
 describe('getDefaultBorderTests', () => {
 

@@ -1,6 +1,6 @@
 import Presentation from "./Presentation";
-import Content from "./Slide/Content/Content";
-import Slide from "./Slide/Slide";
+import Content from "./slide/content/Content";
+import Slide from "./slide/Slide";
 
 //TODO: Массив состояний с указателями! Харнить Editor ⁉️ сделаем позже с помощью редукс
 //TODO: ActionList -> вынести из Editor ⁉️ сделали, доработки будут в редукс

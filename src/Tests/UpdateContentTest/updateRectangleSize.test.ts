@@ -1,12 +1,12 @@
-import ContentType from "../../Const/ContentType";
-import getDefaultPosition from "../../Methods/AddContent/GetParamsOfContent/getDefaultPosition";
-import getDefaultRectangleSize from "../../Methods/AddContent/GetParamsOfContent/getDefaultRectangleSize";
-import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
-import instanceOfRectangle from "../../Methods/AddContent/instanceOfRectangle";
-import updateRectangleSize from "../../Methods/UpdateContent/updateRectangleSize";
-import Editor from "../../Model/Editor";
-import Content from "../../Model/Slide/Content/Content"
-import Rectangle from "../../Model/Slide/Content/Shape/Rectangle";
+import ContentType from "../../const/ContentType";
+import getDefaultPosition from "../../methods/addContent/getParamsOfContent/getDefaultPosition";
+import getDefaultRectangleSize from "../../methods/addContent/getParamsOfContent/getDefaultRectangleSize";
+import getDefaultShape from "../../methods/addContent/getParamsOfContent/getDefaultShape";
+import instanceOfRectangle from "../../methods/addContent/instanceOfRectangle";
+import updateRectangleSize from "../../methods/updateContent/updateRectangleSize";
+import Editor from "../../model/Editor";
+import Content from "../../model/slide/content/Content"
+import Rectangle from "../../model/slide/content/shape/Rectangle";
 
 describe('updateRectangleSizeTest', () => {
     let editor = new Editor();

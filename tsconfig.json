@@ -13,12 +13,12 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "isolatedModules": true
   },
   "include": [

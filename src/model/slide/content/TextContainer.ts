@@ -1,5 +1,5 @@
 import Content from "./Content"
-import RichText from "./Components/RichText";
+import RichText from "./components/RichText";
 
 type TextContainer = Content & {
 	width: number,
