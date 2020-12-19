@@ -19,7 +19,8 @@ function createCircle(editor: Editor): Editor {
 				...editor.currentSlide.contentList,
 				[uuid]: circle
 			}
-		}
+		},
+		currentContent: circle
 	}
 }
 

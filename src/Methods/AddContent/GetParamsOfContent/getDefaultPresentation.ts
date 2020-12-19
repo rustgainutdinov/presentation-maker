@@ -1,5 +1,4 @@
 import Presentation from "../../../Model/Presentation"
-import Content from "../../../Model/Slide/Content/Content"
 import TextContainer from "../../../Model/Slide/Content/TextContainer"
 import Slide from "../../../Model/Slide/Slide"
 import generateUuid from "../../generateUuid"
@@ -14,7 +13,8 @@ function getDefaultPresentation(): Presentation {
         type: 3,
         uuid: uuid,
         richText: getDefaultRichText(),
-        width: 100
+        width: 100,
+        textContainer: undefined
     };
     const slide: Slide = {
         slideId: 1,

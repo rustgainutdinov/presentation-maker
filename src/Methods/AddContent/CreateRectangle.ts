@@ -24,7 +24,8 @@ function createRectangle(editor: Editor): Editor {
 				...editor.currentSlide.contentList,
 				[uuid]: rectangle
 			}
-		}
+		},
+		currentContent: rectangle
 	};
 }
 

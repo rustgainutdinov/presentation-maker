@@ -1,30 +1,35 @@
 import ContentType from "../../Const/ContentType";
 import createTextContainer from "../../Methods/AddContent/createTextContainer";
-import getDefaultTextContainer from "../../Methods/AddContent/GetParamsOfContent/getDefaultTextContainer";
-import instanceOfTextContainer from "../../Methods/AddContent/instanceOfText";
-import Editor from "../../Model/Editor";
+import { getDefaultTextContainer } from "../../Methods/AddContent/GetParamsOfContent/getDefaultTextContainer";
+import getDefaultEditor from "../../Methods/AddContent/GetParamsOfContent/getDegaultEditor";
+import Content from "../../Model/Slide/Content/Content";
+import TextContainer from "../../Model/Slide/Content/TextContainer";
+import throwNewExeption from "../Exeption";
+
+const editor = getDefaultEditor();
+function isTextCntainer(content: Content): content is TextContainer {
+    return 'textContainer' in content;
+}
 
 describe('createTextContainerTest', () => {
-    const editor = new Editor();
-    const textContainerType = ContentType.TextContainer;
     const newEditor = createTextContainer(editor);
     const textContainer = getDefaultTextContainer();
 
     test('addContentToEditor', () => {
-        expect(newEditor.currentContent.type).toBe(textContainerType);
-        expect(checkInstance()).toBe(true)
+        expect(newEditor.currentContent.type).toBe(ContentType.TextContainer);
+        expect(checkInstance()).toBe(true);
 
-        if (!instanceOfTextContainer(newEditor.currentContent)) {
+        if (!isTextCntainer(newEditor.currentContent)) {
+            throwNewExeption();
             return;
         }
 
         expect(newEditor.currentContent.richText).toStrictEqual(textContainer.richText);
-        expect(newEditor.currentContent.background).toBe(textContainer.background);
         expect(newEditor.currentContent.width).toBe(textContainer.width);
     });
 
     function checkInstance() {
-        if (instanceOfTextContainer(newEditor.currentContent)) {
+        if (isTextCntainer(newEditor.currentContent)) {
             return true;
         } else {
             return false

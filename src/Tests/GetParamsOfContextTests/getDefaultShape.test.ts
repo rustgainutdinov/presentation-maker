@@ -3,7 +3,7 @@ import ContentType from "../../Const/ContentType";
 import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
 
 describe('getDefaultShapeTests', () => {
-    const type = ContentType.CIRCLE;
+    const type = ContentType.Circle;
     test('getDefaultBorderColor', () => {
         expect(getDefaultShape(type).border).toStrictEqual({
             width: 1,

@@ -2,7 +2,7 @@ import ContentType from "../../Const/ContentType";
 import getDefaultContent from "../../Methods/AddContent/GetParamsOfContent/getDefaultContent"
 
 describe('getDefaultContentTests', () => {
-    const type = ContentType.CIRCLE;
+    const type = ContentType.Circle;
     test('getDefaultContentPositionTest', () => {
         //Однвременно тест на функцию GetDefaultPosition
         expect(getDefaultContent(type).position).toStrictEqual({

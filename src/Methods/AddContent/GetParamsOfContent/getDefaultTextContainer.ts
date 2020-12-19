@@ -7,7 +7,8 @@ function getDefaultTextContainer(): TextContainer {
     return {
         ...getDefaultContent(contentType.TextContainer),
         width: 100,
-        richText: getDefaultRichText()
+        richText: getDefaultRichText(),
+        textContainer: undefined
     };
 }
 

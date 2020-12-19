@@ -1,21 +1,12 @@
-import addContentToEditor from "../../Methods/AddContent/addContentToEditor";
-import getDefaultPosition from "../../Methods/AddContent/GetParamsOfContent/getDefaultPosition";
-import Editor from "../../Model/Editor";
-import Content from "../../Model/Slide/Content/Content";
+import createCircle from "../../Methods/AddContent/createCircle";
+import getDefaultEditor from "../../Methods/AddContent/GetParamsOfContent/getDegaultEditor";
+
+const editor = getDefaultEditor();
+const newEditor = createCircle(editor);
 
 describe('changeCurrentContentTest', () => {
-    const editor = new Editor();
-    const content: Content = {
-        position: getDefaultPosition(),
-        layer: 1,
-        type: 2,
-        uuid: ""
-    };
-
-    const firstEditor = addContentToEditor(editor, content);
-    const firstId = firstEditor.currentContent.uuid;
-    const secondEditor = addContentToEditor(editor, content);
-    const secondId = secondEditor.currentContent.uuid;
+    const firstId = editor.currentContent.uuid;
+    const secondId = newEditor.currentContent.uuid;
 
     test('addContentToEditor', () => {
         expect(firstId).not.toBe(secondId);

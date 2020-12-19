@@ -1,31 +1,41 @@
 import ContentType from "../../Const/ContentType";
 import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
-import instanceOfCircle from "../../Methods/AddContent/instanceOfCircle";
-import updateCircleBorder from "../../Methods/UpdateContent/updateCircleBorder";
+import getDefaultEditor from "../../Methods/AddContent/GetParamsOfContent/getDegaultEditor";
 import updateCircleRadius from "../../Methods/UpdateContent/updateCircleRadius";
-import Editor from "../../Model/Editor";
 import Content from "../../Model/Slide/Content/Content"
 import Circle from "../../Model/Slide/Content/Shape/Circle";
+import throwNewExeption from "../Exeption";
+
+function isCircle(content: Content): content is Circle {
+    return 'circle' in content;
+}
+const editor = getDefaultEditor();
 
 describe('updateCircleRadiusTest', () => {
-    let editor = new Editor();
-    const circle: Circle = Object.assign(getDefaultShape(ContentType.CIRCLE), {
-        radius: 100
-    });
+    const circle: Circle = {
+        ...getDefaultShape(ContentType.Circle),
+        radius: 100,
+        circle: undefined
+    };
     editor.currentContent = circle;
     const newEditor = updateCircleRadius(editor, 200);
 
     test('checkNewRadius', () => {
-        if (!instanceOfCircle(newEditor?.currentContent)) {
+        if (newEditor?.currentContent == undefined) {
+            throwNewExeption();
+            return
+        }
+        if (!isCircle(newEditor.currentContent)) {
+            throwNewExeption();
             return;
         }
 
-        expect(newEditor?.currentContent.radius).toBe(200);
-        expect(checkInstance(newEditor?.currentContent)).toBe(true)
+        expect(newEditor.currentContent.radius).toBe(200);
+        expect(checkInstance(newEditor.currentContent)).toBe(true)
     });
 
-    function checkInstance(content: Content | undefined) {
-        if (instanceOfCircle(content)) {
+    function checkInstance(content: Content) {
+        if (isCircle(content)) {
             return true;
         } else {
             return false

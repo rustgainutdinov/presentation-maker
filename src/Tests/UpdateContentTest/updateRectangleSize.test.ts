@@ -2,37 +2,49 @@ import ContentType from "../../Const/ContentType";
 import getDefaultPosition from "../../Methods/AddContent/GetParamsOfContent/getDefaultPosition";
 import getDefaultRectangleSize from "../../Methods/AddContent/GetParamsOfContent/getDefaultRectangleSize";
 import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
-import instanceOfRectangle from "../../Methods/AddContent/instanceOfRectangle";
+import getDefaultEditor from "../../Methods/AddContent/GetParamsOfContent/getDegaultEditor";
 import updateRectangleSize from "../../Methods/UpdateContent/updateRectangleSize";
-import Editor from "../../Model/Editor";
 import Content from "../../Model/Slide/Content/Content"
 import Rectangle from "../../Model/Slide/Content/Shape/Rectangle";
+import throwNewExeption from "../Exeption";
+
+function isRectangle(content: Content): content is Rectangle {
+    return 'rectangle' in content;
+}
+const editor = getDefaultEditor();
 
 describe('updateRectangleSizeTest', () => {
-    let editor = new Editor();
-    const rectangle: Rectangle = Object.assign(getDefaultShape(ContentType.Rectangle), {
+
+    const rectangle: Rectangle = {
+        ...getDefaultShape(ContentType.Rectangle),
         bottomRightCoordinate: getDefaultPosition(),
-        rectangleSize: getDefaultRectangleSize()
-    });
+        rectangleSize: getDefaultRectangleSize(),
+        rectangle: undefined
+    };
 
     editor.currentContent = rectangle;
     const newEditor = updateRectangleSize(editor, 200, 200)
 
     test('checkNewSize', () => {
-        if (!instanceOfRectangle(newEditor?.currentContent)) {
+        if (newEditor?.currentContent == undefined) {
+            throwNewExeption();
+            return
+        }
+        if (!isRectangle(newEditor.currentContent)) {
+            throwNewExeption();
             return;
         }
 
-        expect(newEditor?.currentContent.rectangleSize).toStrictEqual({
+        expect(newEditor.currentContent.rectangleSize).toStrictEqual({
             width: 200,
             height: 200
         });
 
-        expect(checkInstance(newEditor?.currentContent)).toBe(true)
+        expect(checkInstance(newEditor.currentContent)).toBe(true)
     });
 
-    function checkInstance(content: Content | undefined) {
-        if (instanceOfRectangle(content)) {
+    function checkInstance(content: Content) {
+        if (isRectangle(content)) {
             return true;
         } else {
             return false
