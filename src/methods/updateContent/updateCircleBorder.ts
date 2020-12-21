@@ -1,4 +1,4 @@
->import Editor from "../../model/Editor";
+import Editor from "../../model/Editor";
 import Circle from "../../model/slide/content/shape/Circle";
 import Content from "../../model/slide/content/Content";
 
