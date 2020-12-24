@@ -1,7 +1,7 @@
 import ContentType from "../../const/ContentType";
-import Editor from "../../model/Editor";
-import TextContainer from "../../model/slide/content/TextContainer";
-import getDefaultContent from "../addContent/getParamsOfContent/getDefaultContent"
+import Editor from "../../Model/Editor";
+import TextContainer from "../../Model/Slide/Content/TextContainer";
+import getDefaultContent from "../AddContent/getParamsOfContent/getDefaultContent"
 import {getDefaultTextContainer} from "./getParamsOfContent/getDefaultTextContainer";
 import generateUuid from "../generateUuid";
 

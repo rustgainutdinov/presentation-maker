@@ -1,4 +1,4 @@
-import Editor from "../../model/Editor";
+import Editor from "../../Model/Editor";
 
 function changeCurrentContent(editor: Editor, newSlideId: string) {
 	return {

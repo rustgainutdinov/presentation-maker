@@ -1,5 +1,5 @@
-import Editor from "../../../model/Editor";
-import getDefaultEditor from "../../../methods/addContent/getDefaultEditor";
+import Editor from "../../../Model/Editor";
+import getDefaultEditor from "../../../Methods/AddContent/getDefaultEditor";
 
 export interface EditorState {
 	past: Editor[],

@@ -1,5 +1,5 @@
-import Content from "./Content"
-import Border from "./components/Border";
+import Content from "../../../Model/Slide/Content/Content"
+import Border from "../Content/components/Border";
 
 type Shape = Content & {
 	border: Border,

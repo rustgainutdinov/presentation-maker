@@ -1,5 +1,5 @@
-import RichText from "../../../model/slide/content/components/RichText";
-import TextContainer from "../../../model/slide/content/TextContainer";
+import RichText from "../../../Model/Slide/Content/components/RichText";
+import TextContainer from "../../../Model/Slide/Content/TextContainer";
 import getDefaultContent from "./getDefaultContent";
 import contentType from "../../../const/ContentType";
 

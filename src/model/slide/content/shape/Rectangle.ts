@@ -1,6 +1,6 @@
-import Point from "../Point"
-import RectangleSize from "../RectangleSize"
-import Shape from "../Shape"
+import Point from "../../../../Model/Slide/Content/Point"
+import RectangleSize from "../../../../Model/Slide/Content/RectangleSize"
+import Shape from "../../../../Model/Slide/Content//Shape"
 
 type Rectangle = Shape & {
 	bottomRightCoordinate: Point;

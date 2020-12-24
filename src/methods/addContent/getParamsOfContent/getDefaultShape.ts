@@ -1,4 +1,4 @@
-import Shape from "../../../model/slide/content/Shape";
+import Shape from "../../../Model/Slide/Content/Shape";
 import getDefaultBorder from "./getDefaultBorder";
 import getDefaultContent from "./getDefaultContent";
 

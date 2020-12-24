@@ -1,12 +1,12 @@
-import Editor from "../../model/Editor";
+import Editor from "../../Model/Editor";
 import generateUuid from "../generateUuid";
 import getDefaultPosition from "./getParamsOfContent/getDefaultPosition";
-import {Slide} from "../../model/slide/Slide";
-import Circle from "../../model/slide/content/shape/Circle";
+import { Slide } from "../../Model/Slide/Slide";
+import Circle from "../../Model/Slide/Content/shape/Circle";
 import getDefaultBorder from "./getParamsOfContent/getDefaultBorder";
 import BorderType from "../../const/BorderType";
 
-export default function (): Editor {
+export default function getDefaultEditor(): Editor {
 	const uuid = generateUuid();
 	const content: Circle = {
 		position: getDefaultPosition(),

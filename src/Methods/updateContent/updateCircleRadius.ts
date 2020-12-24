@@ -1,5 +1,5 @@
-import Editor from "../../model/Editor";
-import Circle from "../../model/slide/content/shape/Circle";
+import Editor from "../../Model/Editor";
+import Circle from "../../Model/Slide/Content/shape/Circle";
 import {isCircle} from "../typeGuardMethods/isCircle";
 
 export function updateCircleRadius(editor: Editor, circleRadius: number) {
