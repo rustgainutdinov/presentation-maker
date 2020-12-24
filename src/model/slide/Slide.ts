@@ -1,12 +1,12 @@
 import Content from "./content/Content"
 
-type Slide = {
+export type ContentList = {
+	[key: string]: Content
+}
+
+export type Slide = {
 	slideId: number,
 	background: string,
 	animation: number,
-	contentList: {
-		[key: string]: Content
-	}
+	contentList: ContentList
 }
-
-export default Slide

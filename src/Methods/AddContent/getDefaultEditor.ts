@@ -1,27 +1,46 @@
 import Editor from "../../model/Editor";
 import generateUuid from "../generateUuid";
-import TextContainer from "../../model/slide/content/TextContainer";
 import getDefaultPosition from "./getParamsOfContent/getDefaultPosition";
-import {getDefaultRichText} from "./getParamsOfContent/getDefaultTextContainer";
-import Slide from "../../model/slide/Slide";
+import {Slide} from "../../model/slide/Slide";
+import Circle from "../../model/slide/content/shape/Circle";
+import getDefaultBorder from "./getParamsOfContent/getDefaultBorder";
+import BorderType from "../../const/BorderType";
 
 export default function (): Editor {
 	const uuid = generateUuid();
-	const content: TextContainer = {
+	const content: Circle = {
 		position: getDefaultPosition(),
 		layer: 1,
 		type: 3,
 		uuid: uuid,
-		richText: getDefaultRichText(),
-		width: 100,
-		textContainer: undefined
+		radius: 50,
+		border: getDefaultBorder(),
+		background: '#FF0000',
+		circle: undefined
 	};
 	const slide: Slide = {
 		slideId: 1,
 		background: "#fff",
 		animation: 1,
 		contentList: {
-			[uuid]: content
+			[generateUuid()]: {
+				position: {
+					x: 150,
+					y: 150
+				},
+				layer: 1,
+				type: 3,
+				uuid: uuid,
+				radius: 70,
+				border: {
+					width: 5,
+					color: '#000000',
+					type: BorderType.SOLID,
+				},
+				background: '#0000FF',
+				circle: undefined
+			},
+			[uuid]: content,
 		}
 	};
 	return {

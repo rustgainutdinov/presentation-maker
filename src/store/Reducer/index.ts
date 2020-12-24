@@ -1,6 +1,8 @@
 import {combineReducers} from "redux";
-import {statesReducer} from "./editor";
+import {editorReducer} from "./editor";
 
 export const rootReducer = combineReducers({
-	states: statesReducer
+	editorReducer
 });
+
+export type RootState = ReturnType<typeof rootReducer>

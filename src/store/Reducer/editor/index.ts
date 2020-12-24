@@ -55,7 +55,7 @@ const initialState: EditorState = {
 	future: []
 };
 
-export function statesReducer(
+export function editorReducer(
 	state = initialState,
 	action: StateActions
 ): EditorState {
