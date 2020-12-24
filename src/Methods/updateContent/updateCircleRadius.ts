@@ -1,12 +1,8 @@
 import Editor from "../../model/Editor";
-import Content from "../../model/slide/content/Content";
 import Circle from "../../model/slide/content/shape/Circle";
+import {isCircle} from "../typeGuardMethods/isCircle";
 
-function isCircle(content: Content): content is Circle {
-	return 'circle' in content;
-}
-
-function updateCircleRadius(editor: Editor, circleRadius: number) {
+export function updateCircleRadius(editor: Editor, circleRadius: number) {
 	if (!isCircle(editor.currentContent)) {
 		return
 	}
@@ -21,5 +17,3 @@ function updateCircleRadius(editor: Editor, circleRadius: number) {
 		}
 	};
 }
-
-export default updateCircleRadius

@@ -1,10 +1,6 @@
 import Point from "./Point"
 
-type Content = {
-	//Данные модели (presentation)
-	// position: Point,
-	// layer: number,
-	// type: number,
+type  Content = {
 	position: Point,
 	layer: number,
 	type: number,

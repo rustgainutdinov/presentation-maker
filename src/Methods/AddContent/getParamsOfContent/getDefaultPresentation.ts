@@ -1,6 +1,6 @@
 import Presentation from "../../../model/Presentation"
 import TextContainer from "../../../model/slide/content/TextContainer"
-import Slide from "../../../model/slide/Slide"
+import {Slide} from "../../../model/slide/Slide"
 import generateUuid from "../../generateUuid"
 import getDefaultPosition from "./getDefaultPosition"
 import {getDefaultRichText} from "./getDefaultTextContainer"
