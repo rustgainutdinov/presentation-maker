@@ -15,6 +15,7 @@ function createRectangle(editor: Editor): Editor {
 		rectangleSize: getDefaultRectangleSize(),
 		rectangle: undefined
 	};
+
 	const uuid = generateUuid();
 	return {
 		...editor,
@@ -24,7 +25,8 @@ function createRectangle(editor: Editor): Editor {
 				...editor.currentSlide.contentList,
 				[uuid]: rectangle
 			}
-		}
+		},
+		currentContent: rectangle
 	};
 }
 

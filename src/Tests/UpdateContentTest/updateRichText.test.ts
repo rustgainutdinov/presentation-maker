@@ -1,70 +1,77 @@
 import ContentType from "../../const/ContentType";
-import getDefaultShape from "../../methods/addContent/getParamsOfContent/getDefaultShape";
-import getDefaultTextContainer from "../../methods/addContent/getParamsOfContent/getDefaultTextContainer";
-import instanceOfTextContainer from "../../methods/addContent/instanceOfText";
-import { updateRichTextColor, updateRichTextFont, updateRichTextValue } from "../../methods/updateContent/updateRichText";
-import Editor from "../../model/Editor";
-import Content from "../../model/slide/content/Content"
-import TextContainer from "../../model/slide/content/TextContainer";
+import getDefaultEditor from "../../Methods/AddContent/getDefaultEditor";
+import getDefaultShape from "../../Methods/AddContent/getParamsOfContent/getDefaultShape";
+import { getDefaultTextContainer } from "../../Methods/AddContent/getParamsOfContent/getDefaultTextContainer";
+import { updateRichTextColor, updateRichTextFont, updateRichTextValue } from "../../Methods/updateContent/updateRichText";
+import Content from "../../Model/Slide/Content/Content"
+import TextContainer from "../../Model/Slide/Content/TextContainer";
+import throwNewExeption from "../Exeption";
 
-function checkInstance(content: Content | undefined) {
-    if (instanceOfTextContainer(content)) {
+function isTextCntainer(content: Content): content is TextContainer {
+    return 'textContainer' in content;
+}
+function checkInstance(content: Content) {
+    if (isTextCntainer(content)) {
         return true;
     } else {
         return false
     }
 }
-
-let editor = new Editor();
-const textContainer: TextContainer = Object.assign(getDefaultShape(ContentType.TextContainer),
-    Object.assign(getDefaultTextContainer()));
+const editor = getDefaultEditor();
+const textContainer: TextContainer = {
+    ...getDefaultShape(ContentType.TextContainer),
+    ...getDefaultTextContainer()
+};
 
 editor.currentContent = textContainer;
 
 describe('updateRichTextColorTest', () => {
     test('checkNewRichTextColor', () => {
         const newEditor = updateRichTextColor(editor, "red");
-        if (!instanceOfTextContainer(newEditor?.currentContent)) {
+        if (newEditor?.currentContent == undefined) {
+            throwNewExeption();
+            return
+        };
+        if (!isTextCntainer(newEditor.currentContent)) {
+            throwNewExeption();
             return;
-        }
+        };
 
-        expect(newEditor?.currentContent.richText.color).toBe("red");
-        expect(checkInstance(newEditor?.currentContent)).toBe(true);
+        expect(newEditor.currentContent.richText.color).toBe("red");
+        expect(checkInstance(newEditor.currentContent)).toBe(true);
     })
 });
 
 describe('updateRichTextFontTest', () => {
-    let editor = new Editor();
-    const TextContainer: TextContainer = Object.assign(getDefaultShape(ContentType.TextContainer),
-        Object.assign(getDefaultTextContainer()));
-
-    editor.currentContent = TextContainer;
-
     test('checkNewRichTextFont', () => {
         const newEditor = updateRichTextFont(editor, 20);
-        if (!instanceOfTextContainer(newEditor?.currentContent)) {
+        if (newEditor?.currentContent == undefined) {
+            throwNewExeption();
+            return
+        };
+        if (!isTextCntainer(newEditor.currentContent)) {
+            throwNewExeption();
             return;
-        }
+        };
 
-        expect(newEditor?.currentContent.richText.font).toBe(20);
-        expect(checkInstance(newEditor?.currentContent)).toBe(true);
+        expect(newEditor.currentContent.richText.font).toBe(20);
+        expect(checkInstance(newEditor.currentContent)).toBe(true);
     });
 });
 
 describe('updateRichTextValueTest', () => {
-    let editor = new Editor();
-    const TextContainer: TextContainer = Object.assign(getDefaultShape(ContentType.TextContainer),
-        Object.assign(getDefaultTextContainer()));
-
-    editor.currentContent = TextContainer;
-
     test('checkNewRichTextValue', () => {
-        const newEditor = updateRichTextValue(editor, "newText");
-        if (!instanceOfTextContainer(newEditor?.currentContent)) {
+        const newEditor = updateRichTextValue(editor, "hello");
+        if (newEditor?.currentContent == undefined) {
+            throwNewExeption();
+            return
+        };
+        if (!isTextCntainer(newEditor.currentContent)) {
+            throwNewExeption();
             return;
-        }
+        };
 
-        expect(newEditor?.currentContent.richText.value).toBe("newText");
-        expect(checkInstance(newEditor?.currentContent)).toBe(true);
+        expect(newEditor.currentContent.richText.value).toBe("hello");
+        expect(checkInstance(newEditor.currentContent)).toBe(true);
     });
 });

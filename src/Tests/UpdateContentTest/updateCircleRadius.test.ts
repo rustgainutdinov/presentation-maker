@@ -1,33 +1,44 @@
 import ContentType from "../../const/ContentType";
-import getDefaultShape from "../../methods/addContent/getParamsOfContent/getDefaultShape";
-import instanceOfCircle from "../../methods/addContent/instanceOfCircle";
-import {updateCircleRadius} from "../../methods/updateContent/updateCircleRadius";
-import Editor from "../../model/Editor";
-import Content from "../../model/slide/content/Content"
-import Circle from "../../model/slide/content/shape/Circle";
+import getDefaultShape from "../../Methods/AddContent/getParamsOfContent/getDefaultShape";
+import getDefaultEditor from "../../Methods/AddContent/getDefaultEditor";
+import Content from "../../Model/Slide/Content/Content"
+import Circle from "../../Model/Slide/Content/shape/Circle";
+import throwNewExeption from "../Exeption";
+import { updateCircleRadius } from "../../Methods/updateContent/updateCircleRadius";
+
+function isCircle(content: Content): content is Circle {
+    return 'circle' in content;
+}
+const editor = getDefaultEditor();
 
 describe('updateCircleRadiusTest', () => {
-	let editor = new Editor();
-	const circle: Circle = Object.assign(getDefaultShape(ContentType.CIRCLE), {
-		radius: 100
-	});
-	editor.currentContent = circle;
-	const newEditor = updateCircleRadius(editor, 200);
-	
-	test('checkNewRadius', () => {
-		if (!instanceOfCircle(newEditor?.currentContent)) {
-			return;
-		}
-		
-		expect(newEditor?.currentContent.radius).toBe(200);
-		expect(checkInstance(newEditor?.currentContent)).toBe(true)
-	});
-	
-	function checkInstance(content: Content | undefined) {
-		if (instanceOfCircle(content)) {
-			return true;
-		} else {
-			return false
-		}
-	}
+    const circle: Circle = {
+        ...getDefaultShape(ContentType.Circle),
+        radius: 100,
+        circle: undefined
+    };
+    editor.currentContent = circle;
+    const newEditor = updateCircleRadius(editor, 200);
+
+    test('checkNewRadius', () => {
+        if (newEditor?.currentContent == undefined) {
+            throwNewExeption();
+            return
+        }
+        if (!isCircle(newEditor.currentContent)) {
+            throwNewExeption();
+            return;
+        }
+
+        expect(newEditor.currentContent.radius).toBe(200);
+        expect(checkInstance(newEditor.currentContent)).toBe(true)
+    });
+
+    function checkInstance(content: Content) {
+        if (isCircle(content)) {
+            return true;
+        } else {
+            return false
+        }
+    }
 })

@@ -1,29 +1,35 @@
 import ContentType from "../../const/ContentType";
-import createRectangle from "../../methods/addContent/createRectangle";
-import getDefaultPosition from "../../methods/addContent/getParamsOfContent/getDefaultPosition";
-import getDefaultRectangleSize from "../../methods/addContent/getParamsOfContent/getDefaultRectangleSize";
-import instanceOfRectangle from "../../methods/addContent/instanceOfRectangle";
-import Editor from "../../model/Editor";
+import createRectangle from "../../Methods/AddContent/createRectangle"
+import getDefaultPosition from "../../Methods/AddContent/getParamsOfContent/getDefaultPosition";
+import getDefaultRectangleSize from "../../Methods/AddContent/getParamsOfContent/getDefaultRectangleSize";
+import getDefaultEditor from "../../Methods/AddContent/getDefaultEditor";
+import Content from "../../Model/Slide/Content/Content";
+import Rectangle from "../../Model/Slide/Content/shape/Rectangle";
+import throwNewExeption from "../Exeption";
+
+function isRectangle(content: Content): content is Rectangle {
+    return 'rectangle' in content;
+}
+const editor = getDefaultEditor()
 
 describe('createRectangleTest', () => {
-    const editor = new Editor();
-    const rectangleType = ContentType.Rectangle;
     const newEditor = createRectangle(editor);
 
     test('addContentToEditor', () => {
-        expect(newEditor.currentContent.type).toBe(rectangleType);
+        expect(newEditor.currentContent.type).toBe(ContentType.Rectangle);
+
         expect(checkInstance()).toBe(true)
 
-        if (!instanceOfRectangle(newEditor.currentContent)) {
+        if (!isRectangle(newEditor.currentContent)) {
+            throwNewExeption();
             return;
         }
-
         expect(newEditor.currentContent.bottomRightCoordinate).toStrictEqual(getDefaultPosition());
         expect(newEditor.currentContent.rectangleSize).toStrictEqual(getDefaultRectangleSize());
     });
 
     function checkInstance() {
-        if (instanceOfRectangle(newEditor.currentContent)) {
+        if (isRectangle(newEditor.currentContent)) {
             return true;
         } else {
             return false

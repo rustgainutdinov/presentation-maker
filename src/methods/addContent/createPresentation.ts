@@ -8,7 +8,7 @@ function createPresentation(editor: Editor): Editor {
 	};
 	return {
 		...editor,
-		currentPresentation: presentation
+		currentPresentation: presentation,
 	}
 }
 
