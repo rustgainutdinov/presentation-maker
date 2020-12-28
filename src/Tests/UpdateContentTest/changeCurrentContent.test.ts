@@ -1,5 +1,5 @@
 import createCircle from "../../Methods/AddContent/createCircle";
-import getDefaultEditor from "../../Methods/AddContent/GetParamsOfContent/getDegaultEditor";
+import getDefaultEditor from "../../Methods/AddContent/getDefaultEditor";
 
 const editor = getDefaultEditor();
 const newEditor = createCircle(editor);

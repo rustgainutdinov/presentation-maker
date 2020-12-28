@@ -1,7 +1,7 @@
-import ContentType from "../../Const/ContentType";
+import ContentType from "../../const/ContentType";
 import createTextContainer from "../../Methods/AddContent/createTextContainer";
-import { getDefaultTextContainer } from "../../Methods/AddContent/GetParamsOfContent/getDefaultTextContainer";
-import getDefaultEditor from "../../Methods/AddContent/GetParamsOfContent/getDegaultEditor";
+import { getDefaultTextContainer } from "../../Methods/AddContent/getParamsOfContent/getDefaultTextContainer";
+import getDefaultEditor from "../../Methods/AddContent/getDefaultEditor";
 import Content from "../../Model/Slide/Content/Content";
 import TextContainer from "../../Model/Slide/Content/TextContainer";
 import throwNewExeption from "../Exeption";

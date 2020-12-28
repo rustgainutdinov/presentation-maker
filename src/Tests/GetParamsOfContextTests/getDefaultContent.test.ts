@@ -1,5 +1,5 @@
-import ContentType from "../../Const/ContentType";
-import getDefaultContent from "../../Methods/AddContent/GetParamsOfContent/getDefaultContent"
+import ContentType from "../../const/ContentType";
+import getDefaultContent from "../../Methods/AddContent/getParamsOfContent/getDefaultContent"
 
 describe('getDefaultContentTests', () => {
     const type = ContentType.Circle;

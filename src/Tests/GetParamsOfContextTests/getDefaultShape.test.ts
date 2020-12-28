@@ -1,12 +1,12 @@
-import BorderType from "../../Const/BorderType";
-import ContentType from "../../Const/ContentType";
-import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
+import BorderType from "../../const/BorderType";
+import ContentType from "../../const/ContentType";
+import getDefaultShape from "../../Methods/AddContent/getParamsOfContent/getDefaultShape";
 
 describe('getDefaultShapeTests', () => {
     const type = ContentType.Circle;
     test('getDefaultBorderColor', () => {
         expect(getDefaultShape(type).border).toStrictEqual({
-            width: 1,
+            width: 10,
             color: '#00FF00',
             type: BorderType.SOLID
         });

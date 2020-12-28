@@ -1,11 +1,11 @@
-import ContentType from "../../Const/ContentType";
-import getDefaultPosition from "../../Methods/AddContent/GetParamsOfContent/getDefaultPosition";
-import getDefaultRectangleSize from "../../Methods/AddContent/GetParamsOfContent/getDefaultRectangleSize";
-import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
-import getDefaultEditor from "../../Methods/AddContent/GetParamsOfContent/getDegaultEditor";
-import updateRectangleBorder from "../../Methods/UpdateContent/updateRectangleBorder";
+import ContentType from "../../const/ContentType";
+import getDefaultEditor from "../../Methods/AddContent/getDefaultEditor";
+import getDefaultPosition from "../../Methods/AddContent/getParamsOfContent/getDefaultPosition";
+import getDefaultRectangleSize from "../../Methods/AddContent/getParamsOfContent/getDefaultRectangleSize";
+import getDefaultShape from "../../Methods/AddContent/getParamsOfContent/getDefaultShape";
+import updateRectangleBorder from "../../Methods/updateContent/updateRectangleBorder";
 import Content from "../../Model/Slide/Content/Content"
-import Rectangle from "../../Model/Slide/Content/Shape/Rectangle";
+import Rectangle from "../../Model/Slide/Content/shape/Rectangle";
 import throwNewExeption from "../Exeption";
 
 function isRectangle(content: Content): content is Rectangle {

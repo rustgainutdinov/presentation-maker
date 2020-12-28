@@ -1,4 +1,4 @@
-import { getDefaultTextContainer } from "../../Methods/AddContent/GetParamsOfContent/getDefaultTextContainer";
+import { getDefaultTextContainer } from "../../Methods/AddContent/getParamsOfContent/getDefaultTextContainer";
 
 
 describe('getDefaultContentTests', () => {
@@ -6,7 +6,6 @@ describe('getDefaultContentTests', () => {
         expect(getDefaultTextContainer().width).toBe(100);
     });
 
-    //Одновременно тест на функцию getDefaultRichText
     test('getDefaultContentPositionlayer', () => {
         expect(getDefaultTextContainer().richText).toStrictEqual({
             color: '#ffffff',

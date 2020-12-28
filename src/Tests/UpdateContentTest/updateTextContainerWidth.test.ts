@@ -1,8 +1,8 @@
-import ContentType from "../../Const/ContentType";
-import getDefaultShape from "../../Methods/AddContent/GetParamsOfContent/getDefaultShape";
-import { getDefaultTextContainer } from "../../Methods/AddContent/GetParamsOfContent/getDefaultTextContainer";
-import getDefaultEditor from "../../Methods/AddContent/GetParamsOfContent/getDegaultEditor";
-import updateTextContainerWidth from "../../Methods/UpdateContent/updateTextContainerWidth";
+import ContentType from "../../const/ContentType";
+import getDefaultEditor from "../../Methods/AddContent/getDefaultEditor";
+import getDefaultShape from "../../Methods/AddContent/getParamsOfContent/getDefaultShape";
+import { getDefaultTextContainer } from "../../Methods/AddContent/getParamsOfContent/getDefaultTextContainer";
+import updateTextContainerWidth from "../../Methods/updateContent/updateTextContainerWidth";
 import Content from "../../Model/Slide/Content/Content"
 import TextContainer from "../../Model/Slide/Content/TextContainer";
 import throwNewExeption from "../Exeption";

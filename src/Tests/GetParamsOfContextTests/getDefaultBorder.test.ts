@@ -1,5 +1,5 @@
-import BorderType from "../../Const/BorderType";
-import getDefaultBorder from "../../Methods/AddContent/GetParamsOfContent/getDefaultBorder"
+import BorderType from "../../const/BorderType";
+import getDefaultBorder from "../../Methods/AddContent/getParamsOfContent/getDefaultBorder"
 
 describe('getDefaultBorderTests', () => {
 
@@ -7,7 +7,7 @@ describe('getDefaultBorderTests', () => {
         expect(getDefaultBorder().color).toBe('#00FF00');
     });
     test('getDefaultBorderWidth', () => {
-        expect(getDefaultBorder().width).toBe(1);
+        expect(getDefaultBorder().width).toBe(10);
     });
     test('getDefaultBorderType', () => {
         expect(getDefaultBorder().type).toBe(BorderType.SOLID);
