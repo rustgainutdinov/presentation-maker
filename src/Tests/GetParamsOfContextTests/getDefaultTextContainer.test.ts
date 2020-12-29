@@ -8,7 +8,7 @@ describe('getDefaultContentTests', () => {
 
     test('getDefaultContentPositionlayer', () => {
         expect(getDefaultTextContainer().richText).toStrictEqual({
-            color: '#ffffff',
+            color: '#000000',
             font: 12,
             value: 'new Text'
         });

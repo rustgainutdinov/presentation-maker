@@ -14,7 +14,7 @@ function getDefaultTextContainer(): TextContainer {
 
 function getDefaultRichText(): RichText {
 	return {
-		color: '#ffffff',
+		color: '#000000',
 		font: 12,
 		value: 'new Text'
 	}

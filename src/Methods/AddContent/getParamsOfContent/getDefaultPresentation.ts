@@ -1,9 +1,9 @@
 import Presentation from "../../../Model/Presentation"
 import TextContainer from "../../../Model/Slide/Content/TextContainer"
-import {Slide} from "../../../Model/Slide/Slide"
+import { Slide } from "../../../Model/Slide/Slide"
 import generateUuid from "../../generateUuid"
 import getDefaultPosition from "./getDefaultPosition"
-import {getDefaultRichText} from "./getDefaultTextContainer"
+import { getDefaultRichText } from "./getDefaultTextContainer"
 
 function getDefaultPresentation(): Presentation {
 	const uuid = generateUuid();
@@ -24,7 +24,7 @@ function getDefaultPresentation(): Presentation {
 			[uuid]: firstContent
 		}
 	};
-	
+
 	return {
 		name: "newPresentation",
 		date: new Date(),
